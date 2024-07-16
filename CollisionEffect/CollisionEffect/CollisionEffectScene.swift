@@ -9,10 +9,10 @@ import SpriteKit
 
 final class CollisionEffectScene: SKScene {
 
-    let gradientNode: SKSpriteNode
+    let backgroundGradientNode: SKSpriteNode
     private let circleNode: SKShapeNode
     
-    private var queue: FIFOQueue = FIFOQueue(maxCapacity: 5)
+    private var queue: FIFOQueue = FIFOQueue(maxCapacity: 7)
     
     override init() {
         let color1: CGColor = UIColor(red: 209/255, green: 107/255, blue: 165/255, alpha: 1).cgColor
@@ -29,7 +29,7 @@ final class CollisionEffectScene: SKScene {
             layer.render(in: context.cgContext)
         }
         let texture = SKTexture(image: image)
-        gradientNode = SKSpriteNode(texture: texture)
+        backgroundGradientNode = SKSpriteNode(texture: texture)
 //        gradientNode.run(.fadeOut(withDuration: 2.0))
         
         let radius: CGFloat = 50
@@ -38,11 +38,15 @@ final class CollisionEffectScene: SKScene {
         circleNode.fillColor = .white.withAlphaComponent(0.2)
         circleNode.strokeColor = .white.withAlphaComponent(0.8)
         circleNode.glowWidth = 0
-        circleNode.physicsBody = SKPhysicsBody(circleOfRadius: radius)
+        let circlePhysicsBody = SKPhysicsBody(circleOfRadius: radius)
+        circlePhysicsBody.restitution = 1.0
+        circlePhysicsBody.linearDamping = 0.0
+        circlePhysicsBody.angularDamping = 0.0
+        circleNode.physicsBody = circlePhysicsBody
         
         super.init(size: .zero)
         
-        addChild(gradientNode)
+        addChild(backgroundGradientNode)
         
         scaleMode = .resizeFill
         backgroundColor = .clear
@@ -52,6 +56,12 @@ final class CollisionEffectScene: SKScene {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func didChangeSize(_ oldSize: CGSize) {
+        let backgroundGradientPhysicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        backgroundGradientPhysicsBody.friction = 0.0
+        physicsBody = backgroundGradientPhysicsBody
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -76,6 +86,8 @@ final class CollisionEffectScene: SKScene {
     private func createCircle(at point: CGPoint) {
         let node = circleNode.copy() as! SKShapeNode
         node.position = point
+        let velocityRange = (-50...50)
+        node.physicsBody?.velocity = CGVector(dx: velocityRange.randomElement()!, dy: velocityRange.randomElement()!)
         
         addChild(node)
         

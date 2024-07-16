@@ -34,7 +34,7 @@ final class CollisionEffectViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        scene.gradientNode.size = view.frame.size
+        scene.backgroundGradientNode.size = view.frame.size
     }
     
     override var prefersStatusBarHidden: Bool {

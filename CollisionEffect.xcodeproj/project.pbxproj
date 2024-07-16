@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA9860232C468A6D00D59417 /* CollisionEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9860222C468A6D00D59417 /* CollisionEffectViewController.swift */; };
 		DA9860252C468AD100D59417 /* CollisionEffectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9860242C468AD100D59417 /* CollisionEffectScene.swift */; };
-		DA9860272C468B6E00D59417 /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = DA9860262C468B6E00D59417 /* Background.sks */; };
 		DA98602A2C46A6DC00D59417 /* FIFOQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9860292C46A6DC00D59417 /* FIFOQueue.swift */; };
 		DAB746522C411F5200D6B6C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB746512C411F5200D6B6C6 /* AppDelegate.swift */; };
 		DAB746542C411F5200D6B6C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DAB746532C411F5200D6B6C6 /* GameScene.sks */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		DA9860222C468A6D00D59417 /* CollisionEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionEffectViewController.swift; sourceTree = "<group>"; };
 		DA9860242C468AD100D59417 /* CollisionEffectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionEffectScene.swift; sourceTree = "<group>"; };
-		DA9860262C468B6E00D59417 /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		DA9860292C46A6DC00D59417 /* FIFOQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOQueue.swift; sourceTree = "<group>"; };
 		DAB7464E2C411F5200D6B6C6 /* CollisionEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollisionEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB746512C411F5200D6B6C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 			children = (
 				DA9860222C468A6D00D59417 /* CollisionEffectViewController.swift */,
 				DA9860242C468AD100D59417 /* CollisionEffectScene.swift */,
-				DA9860262C468B6E00D59417 /* Background.sks */,
 			);
 			path = CollisionEffect;
 			sourceTree = "<group>";
@@ -204,7 +201,6 @@
 				DAB746542C411F5200D6B6C6 /* GameScene.sks in Resources */,
 				DAB7465F2C411F5400D6B6C6 /* Assets.xcassets in Resources */,
 				DAB746692C41425600D6B6C6 /* Rain.sks in Resources */,
-				DA9860272C468B6E00D59417 /* Background.sks in Resources */,
 				DAB746562C411F5200D6B6C6 /* Actions.sks in Resources */,
 				DAB746622C411F5400D6B6C6 /* Base in Resources */,
 			);
@@ -368,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2AVC8X7323;
@@ -384,6 +381,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.woin2ee.CollisionEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2AVC8X7323;
@@ -411,6 +410,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.woin2ee.CollisionEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
