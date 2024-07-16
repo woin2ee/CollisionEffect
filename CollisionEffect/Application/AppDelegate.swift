@@ -14,7 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if let windowScene = application.connectedScenes.first as? UIWindowScene {
+            window = UIWindow(windowScene: windowScene)
+        }
+        
+        window?.rootViewController = CollisionEffectViewController()
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
