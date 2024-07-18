@@ -1,0 +1,15 @@
+{
+  "originHash" : "7a980e1ac0a721ed6da13e70e38e9463feb88a2d26fcd895cf4eb49fd35350d4",
+  "pins" : [
+    {
+      "identity" : "fifoqueue",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/woin2ee/FIFOQueue.git",
+      "state" : {
+        "revision" : "2b6ceba05c612527ccdcb0ef6914ee45e9f15e54",
+        "version" : "0.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}

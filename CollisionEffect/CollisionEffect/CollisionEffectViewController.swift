@@ -40,4 +40,22 @@ final class CollisionEffectViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         true
     }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            let impactFeedbackGenerator = if #available(iOS 17.5, *) {
+                UIImpactFeedbackGenerator(style: .heavy, view: view)
+            } else {
+                UIImpactFeedbackGenerator(style: .heavy)
+            }
+            impactFeedbackGenerator.impactOccurred()
+            scene.resetCirclesVelocity()
+        }
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+    }
+    
+    override func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+    }
 }

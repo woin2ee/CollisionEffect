@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA9860232C468A6D00D59417 /* CollisionEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9860222C468A6D00D59417 /* CollisionEffectViewController.swift */; };
 		DA9860252C468AD100D59417 /* CollisionEffectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9860242C468AD100D59417 /* CollisionEffectScene.swift */; };
-		DA98602A2C46A6DC00D59417 /* FIFOQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9860292C46A6DC00D59417 /* FIFOQueue.swift */; };
 		DAB746522C411F5200D6B6C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB746512C411F5200D6B6C6 /* AppDelegate.swift */; };
 		DAB746542C411F5200D6B6C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DAB746532C411F5200D6B6C6 /* GameScene.sks */; };
 		DAB746562C411F5200D6B6C6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DAB746552C411F5200D6B6C6 /* Actions.sks */; };
@@ -22,12 +21,12 @@
 		DAB7466F2C4145B900D6B6C6 /* RainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7466E2C4145B900D6B6C6 /* RainViewController.swift */; };
 		DAC708E02C4633F30046D107 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC708DF2C4633F30046D107 /* CircleViewController.swift */; };
 		DAC708E22C4662CF0046D107 /* CircleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC708E12C4662CF0046D107 /* CircleScene.swift */; };
+		DAF82E742C49437C00509AAE /* FIFOQueue in Frameworks */ = {isa = PBXBuildFile; productRef = DAF82E732C49437C00509AAE /* FIFOQueue */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA9860222C468A6D00D59417 /* CollisionEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionEffectViewController.swift; sourceTree = "<group>"; };
 		DA9860242C468AD100D59417 /* CollisionEffectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionEffectScene.swift; sourceTree = "<group>"; };
-		DA9860292C46A6DC00D59417 /* FIFOQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOQueue.swift; sourceTree = "<group>"; };
 		DAB7464E2C411F5200D6B6C6 /* CollisionEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollisionEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB746512C411F5200D6B6C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAB746532C411F5200D6B6C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF82E742C49437C00509AAE /* FIFOQueue in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,14 +61,6 @@
 				DA9860242C468AD100D59417 /* CollisionEffectScene.swift */,
 			);
 			path = CollisionEffect;
-			sourceTree = "<group>";
-		};
-		DA9860282C46A6D300D59417 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				DA9860292C46A6DC00D59417 /* FIFOQueue.swift */,
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		DAB746452C411F5200D6B6C6 = {
@@ -90,7 +82,6 @@
 		DAB746502C411F5200D6B6C6 /* CollisionEffect */ = {
 			isa = PBXGroup;
 			children = (
-				DA9860282C46A6D300D59417 /* Utility */,
 				DA9860212C468A5500D59417 /* CollisionEffect */,
 				DAC708DC2C4632D00046D107 /* Circle */,
 				DAC708DB2C462D9B0046D107 /* Rain */,
@@ -156,6 +147,9 @@
 			dependencies = (
 			);
 			name = CollisionEffect;
+			packageProductDependencies = (
+				DAF82E732C49437C00509AAE /* FIFOQueue */,
+			);
 			productName = CollisionEffect;
 			productReference = DAB7464E2C411F5200D6B6C6 /* CollisionEffect.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +178,9 @@
 				Base,
 			);
 			mainGroup = DAB746452C411F5200D6B6C6;
+			packageReferences = (
+				DAF82E722C49437C00509AAE /* XCRemoteSwiftPackageReference "FIFOQueue" */,
+			);
 			productRefGroup = DAB7464F2C411F5200D6B6C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,7 +219,6 @@
 				DAB746522C411F5200D6B6C6 /* AppDelegate.swift in Sources */,
 				DA9860232C468A6D00D59417 /* CollisionEffectViewController.swift in Sources */,
 				DAB7466F2C4145B900D6B6C6 /* RainViewController.swift in Sources */,
-				DA98602A2C46A6DC00D59417 /* FIFOQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +435,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DAF82E722C49437C00509AAE /* XCRemoteSwiftPackageReference "FIFOQueue" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/woin2ee/FIFOQueue.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAF82E732C49437C00509AAE /* FIFOQueue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAF82E722C49437C00509AAE /* XCRemoteSwiftPackageReference "FIFOQueue" */;
+			productName = FIFOQueue;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAB746462C411F5200D6B6C6 /* Project object */;
 }

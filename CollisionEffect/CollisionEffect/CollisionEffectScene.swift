@@ -5,6 +5,7 @@
 //  Created by Jaewon Yun on 7/16/24.
 //
 
+import FIFOQueue
 import SpriteKit
 
 final class CollisionEffectScene: SKScene {
@@ -12,7 +13,7 @@ final class CollisionEffectScene: SKScene {
     let backgroundGradientNode: SKSpriteNode
     private let circleNode: SKShapeNode
     
-    private var queue: FIFOQueue = FIFOQueue(maxCapacity: 7)
+    private var queue: FIFOQueue = FIFOQueue<SKShapeNode>(maxCapacity: 7)
     
     override init() {
         let color1: CGColor = UIColor(red: 209/255, green: 107/255, blue: 165/255, alpha: 1).cgColor
@@ -96,5 +97,12 @@ final class CollisionEffectScene: SKScene {
             .fadeOut(withDuration: 0.7),
             .removeFromParent(),
         ]))
+    }
+    
+    func resetCirclesVelocity() {
+        let velocityRange = (-70...70)
+        queue.forEach { circle in
+            circle.physicsBody?.velocity = CGVector(dx: velocityRange.randomElement()!, dy: velocityRange.randomElement()!)
+        }
     }
 }
