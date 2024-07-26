@@ -8,12 +8,21 @@
 import FIFOQueue
 import SpriteKit
 
+enum CircleVelocity: Int {
+    case normal = 50
+    case fast = 70
+    
+    var range: ClosedRange<Int> {
+        (-self.rawValue...self.rawValue)
+    }
+}
+
 final class CollisionEffectScene: SKScene {
 
     let backgroundGradientNode: SKSpriteNode
     private let circleNode: SKShapeNode
     
-    private var queue: FIFOQueue = FIFOQueue<SKShapeNode>(maxCapacity: 7)
+    let queue: FIFOQueue = FIFOQueue<SKShapeNode>(maxCapacity: 7)
     
     override init() {
         let color1: CGColor = UIColor(red: 209/255, green: 107/255, blue: 165/255, alpha: 1).cgColor
@@ -66,11 +75,9 @@ final class CollisionEffectScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -81,13 +88,12 @@ final class CollisionEffectScene: SKScene {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
     }
     
     private func createCircle(at point: CGPoint) {
         let node = circleNode.copy() as! SKShapeNode
         node.position = point
-        let velocityRange = (-50...50)
+        let velocityRange = CircleVelocity.normal.range
         node.physicsBody?.velocity = CGVector(dx: velocityRange.randomElement()!, dy: velocityRange.randomElement()!)
         
         addChild(node)
@@ -97,12 +103,5 @@ final class CollisionEffectScene: SKScene {
             .fadeOut(withDuration: 0.7),
             .removeFromParent(),
         ]))
-    }
-    
-    func resetCirclesVelocity() {
-        let velocityRange = (-70...70)
-        queue.forEach { circle in
-            circle.physicsBody?.velocity = CGVector(dx: velocityRange.randomElement()!, dy: velocityRange.randomElement()!)
-        }
     }
 }

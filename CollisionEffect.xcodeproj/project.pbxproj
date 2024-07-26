@@ -22,6 +22,9 @@
 		DAC708E02C4633F30046D107 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC708DF2C4633F30046D107 /* CircleViewController.swift */; };
 		DAC708E22C4662CF0046D107 /* CircleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC708E12C4662CF0046D107 /* CircleScene.swift */; };
 		DAF82E742C49437C00509AAE /* FIFOQueue in Frameworks */ = {isa = PBXBuildFile; productRef = DAF82E732C49437C00509AAE /* FIFOQueue */; };
+		DAF82E762C50B5C300509AAE /* ShakeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF82E752C50B5C300509AAE /* ShakeManager.swift */; };
+		DAF82E7A2C52598D00509AAE /* RegularShakeCollisionEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF82E792C52598D00509AAE /* RegularShakeCollisionEffectViewController.swift */; };
+		DAF82E7C2C525B6900509AAE /* AccelerateShakeCollisionEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF82E7B2C525B6900509AAE /* AccelerateShakeCollisionEffectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		DAB7466E2C4145B900D6B6C6 /* RainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainViewController.swift; sourceTree = "<group>"; };
 		DAC708DF2C4633F30046D107 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 		DAC708E12C4662CF0046D107 /* CircleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleScene.swift; sourceTree = "<group>"; };
+		DAF82E752C50B5C300509AAE /* ShakeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeManager.swift; sourceTree = "<group>"; };
+		DAF82E792C52598D00509AAE /* RegularShakeCollisionEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularShakeCollisionEffectViewController.swift; sourceTree = "<group>"; };
+		DAF82E7B2C525B6900509AAE /* AccelerateShakeCollisionEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerateShakeCollisionEffectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 			children = (
 				DA9860222C468A6D00D59417 /* CollisionEffectViewController.swift */,
 				DA9860242C468AD100D59417 /* CollisionEffectScene.swift */,
+				DAF82E752C50B5C300509AAE /* ShakeManager.swift */,
+				DAF82E792C52598D00509AAE /* RegularShakeCollisionEffectViewController.swift */,
+				DAF82E7B2C525B6900509AAE /* AccelerateShakeCollisionEffectViewController.swift */,
 			);
 			path = CollisionEffect;
 			sourceTree = "<group>";
@@ -211,13 +220,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC708E22C4662CF0046D107 /* CircleScene.swift in Sources */,
+				DAF82E7A2C52598D00509AAE /* RegularShakeCollisionEffectViewController.swift in Sources */,
 				DAB746582C411F5200D6B6C6 /* GameScene.swift in Sources */,
 				DAB7465A2C411F5200D6B6C6 /* GameViewController.swift in Sources */,
 				DAC708E02C4633F30046D107 /* CircleViewController.swift in Sources */,
+				DAF82E762C50B5C300509AAE /* ShakeManager.swift in Sources */,
 				DA9860252C468AD100D59417 /* CollisionEffectScene.swift in Sources */,
 				DAB7466D2C41442A00D6B6C6 /* RainScene.swift in Sources */,
 				DAB746522C411F5200D6B6C6 /* AppDelegate.swift in Sources */,
 				DA9860232C468A6D00D59417 /* CollisionEffectViewController.swift in Sources */,
+				DAF82E7C2C525B6900509AAE /* AccelerateShakeCollisionEffectViewController.swift in Sources */,
 				DAB7466F2C4145B900D6B6C6 /* RainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

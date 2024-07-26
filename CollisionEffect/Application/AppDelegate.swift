@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window = UIWindow(windowScene: windowScene)
         }
         
-        window?.rootViewController = CollisionEffectViewController()
+        window?.rootViewController = AccelerateShakeCollisionEffectViewController()
         window?.makeKeyAndVisible()
         
         return true
